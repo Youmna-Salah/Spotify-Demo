@@ -13,7 +13,7 @@ export default class Artists extends React.Component{
 		}
 	}
 	componentDidMount(){
-		axios.get(`${APIURL}/search?type=artist&q=Hilary`).then(response => {
+		axios.get(`${APIURL}/search?type=artist&q=Amr`).then(response => {
 			this.setState({artistList: response.data.artists.items});
 		});
 	}

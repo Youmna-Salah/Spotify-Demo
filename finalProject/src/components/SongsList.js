@@ -1,5 +1,6 @@
 import React from 'react';
 export default function SongsList (props){
+	console.log("SONGS LISTS");
 	console.log(props);
 	return(<div className="row" key="100">
 		<ul key="200">

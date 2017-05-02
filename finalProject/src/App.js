@@ -2,6 +2,8 @@ import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Home from './components/Home';
 import Artists from './components/Artists';
+import Albums from './components/Albums';
+
 import Player from './components/Player';
 
 import SingleArtist from './components/SingleArtist'; 
@@ -34,6 +36,9 @@ export default class App extends React.Component{
 			<Menu />
 			<Route exact path="/" component={Home}/>
 			<Route path="/artists" component={Artists}/>
+			<Route path="/albums/:id" render={(routeParams)=> <Albums {...routeParams}  playTrack={this.playTrack}/>}
+			  />
+
 			<Route path="/artist/:id"
 			 render={(routeParams)=> <SingleArtist {...routeParams}  playTrack={this.playTrack}/>}
 			  />
