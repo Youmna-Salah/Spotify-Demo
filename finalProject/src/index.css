@@ -1,0 +1,128 @@
+body{
+	background-color: #f1f1f1;
+	margin: 0;
+	font-family: helvetica;
+	font-weight: 100px;
+
+}
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: block;
+}
+li{
+	padding: 0;
+	margin: 0;
+	display:block;
+}
+h1,h2,h3,h4,h5,h6, p, a{
+	font-family: helvetica;
+	font-weight: 100px;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 auto;
+	font-style: normal;
+	-webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+iframe{
+    width: 100%;
+   	margin-bottom: 20px;
+	background-color: gray;
+}
+div{
+	margin: 0;
+}
+.player{
+	position: fixed;
+	background-color: red;
+	bottom: 0;
+	left:0;
+	width:100%;
+	padding:20px; 
+}
+#img{
+	text-align: center;
+	margin: 0 auto;
+	width: 50%;
+	height: 200px;
+	padding-left: 2px;
+	display: block;
+}
+.clear{
+	clear: both;
+}
+.titleList{
+	-webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    width: 100%;
+    padding: 10px;
+	display: block;
+	font-size: 100%;
+	text-align: center;
+	margin: 0 auto;
+
+}
+.elementList{
+	padding-top: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.container{
+	float: right;
+    display: inline-block;
+    width: 25%;
+    max-height: 80%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: white;
+    padding: 21px;
+    margin-left: 10px;
+}
+.main-content{
+    padding: 20px 70px;
+	padding-top: 50px;
+}
+.videoPreview{
+	float:left;
+    display: inline-block;
+	width:70%;
+}
+.titleVP{
+		max-height: 50vh;
+
+}
+.search{
+	padding: 20px;
+	background-color: white;
+}
+#details{
+	padding: 20px;
+	background-color: white
+}
+.searchbar{
+    width: 68%;
+    height: 50px;
+    display: inline-flex;
+    position: relative;
+    margin: 20px;
+}
+.searchContainer{
+	display: block;
+}
+.search{
+    margin: 0 auto;
+    width: 100%;
+    display: inline-flex;
+}
+.logo{
+    display: flex;
+    display: inline;
+    height: 100px;
+    width: 200px;
+    position: relative;
+}
+

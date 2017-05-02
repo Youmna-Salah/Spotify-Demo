@@ -1,0 +1,25 @@
+.pic{
+    height: 100px;
+    width: 20%;
+    float: left;
+}
+.navigation{
+	background-color: gray;
+}
+.right{
+	float: right;
+}
+li {
+	/*width: 20px;*/
+	margin-left: 10px;
+    float: left;
+}
+ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.clear{
+	clear:both;
+}
