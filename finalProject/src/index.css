@@ -1,10 +1,11 @@
 body{
-	background-color: #f1f1f1;
+	background-color: black;
 	margin: 0;
 	font-family: helvetica;
 	font-weight: 100px;
 
 }
+
 ul{
 	padding: 0;
 	margin: 0;
@@ -15,6 +16,9 @@ li{
 	padding: 0;
 	margin: 0;
 	display:block;
+}
+a{
+	color: white;
 }
 h1,h2,h3,h4,h5,h6, p, a{
 	font-family: helvetica;
@@ -36,6 +40,9 @@ iframe{
 div{
 	margin: 0;
 }
+img {
+	max-width: 100%;
+}
 .player{
 	position: fixed;
 	background-color: red;
@@ -43,14 +50,6 @@ div{
 	left:0;
 	width:100%;
 	padding:20px; 
-}
-#img{
-	text-align: center;
-	margin: 0 auto;
-	width: 50%;
-	height: 200px;
-	padding-left: 2px;
-	display: block;
 }
 .clear{
 	clear: both;
@@ -124,5 +123,86 @@ div{
     height: 100px;
     width: 200px;
     position: relative;
+}
+.page{
+	font-family: 'Lato', sans-serif;
+	src: 'https://fonts.googleapis.com/css?family=Lato';
+	background-color: black;
+	max-width: 100rem;	
+}
+.page.row{
+	max-width: 100rem;
+}
+.menu{
+	width: 13%;
+	color: white;
+	/*height:100%;*/
+}
+.menu a{
+	color: white;
+	opacity: 0.6;
+	font-weight: bold;
+}
+.menu a:hover{
+	color: white;
+	opacity: 0.6;
+}
+.title{
+	color: white;
+	font-weight: bold;
+}
+.spotify-logo{
+	background-image: url('https://spot-music-app.herokuapp.com/static/media/logo.1c7de6e7.png');
+	margin: 3%;
+	margin-top: 20%;
+	margin-bottom: 40%;
+	height: 45px;
+	width: 150px;
+	background-size: contain;
+	max-width: 100%;
+	background-repeat: no-repeat;
+}
+.artists-list-container{
+	background-color: rgb(21, 21, 21);
+	height: 100vh;
+	overflow-y: scroll;
+	padding-left: 2%;
+	padding-top: 2%;
+}
+.artists-list-container .columns{
+	float: right;
+}
+
+.artists-list a{
+	color: white;
+	font-weight: bold;
+}
+.artists-list.row{
+	max-width: 100rem;
+	margin: 2%;
+}
+.artist-img-list{
+	text-align: center;
+	padding-left: 2px;
+	display: block;
+	width: 270px;
+	height: 250px;
+	background-size: cover;
+	margin-bottom: 4%;
+}
+.artist-img-list:hover{
+	opacity: 0.3;
+}
+.user-name{
+	color: white;
+	position: absolute;
+	bottom: 0;
+}
+.artist{
+	margin-bottom: 4%;
+	text-align: center;
+}
+.artist a:hover{
+	color:white;
 }
 

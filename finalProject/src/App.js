@@ -3,12 +3,11 @@ import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Home from './components/Home';
 import Artists from './components/Artists';
 import Albums from './components/Albums';
-
 import Player from './components/Player';
-
 import SingleArtist from './components/SingleArtist'; 
 /* API information */
 export const APIURL="https://api.spotify.com/v1"; 
+
 
 export default class App extends React.Component{
 	constructor(props) {
@@ -32,19 +31,15 @@ export default class App extends React.Component{
 	render(){
 		return(
 			<BrowserRouter>
-			<div>
-			<Menu />
-			<Route exact path="/" component={Home}/>
-			<Route path="/artists" component={Artists}/>
-			<Route path="/albums/:id" render={(routeParams)=> <Albums {...routeParams}  playTrack={this.playTrack}/>}
-			  />
-
-			<Route path="/artist/:id"
-			 render={(routeParams)=> <SingleArtist {...routeParams}  playTrack={this.playTrack}/>}
-			  />
-			<Player current={this.state.queue[this.state.currentIndex]}/>
-
-			</div>
+				<div className="page row">
+					<Menu />
+					<Route exact path="/" component={Artists}></Route>
+					<Route path="/artists" component={Artists}></Route>
+					<Route path="/albums/:id" render={(routeParams)=> <Albums {...routeParams}  playTrack={this.playTrack}/>}/>
+					<Route path="/artist/:id"
+					 render={(routeParams)=> <SingleArtist {...routeParams}  playTrack={this.playTrack}/>}/>
+					<Player current={this.state.queue[this.state.currentIndex]}/>
+				</div>
 			</BrowserRouter>
 			)
 	}
@@ -52,13 +47,19 @@ export default class App extends React.Component{
 
 function Menu(props){
 	return(
-		<ul>
-		<li><Link to="/">Home</Link></li>
-		<li><Link to="/artist">Artist</Link></li>
-		<li><Link to="/artists">Artists</Link></li>
+		<div className="menu">
+			<div className="columns">
+				<div className="spotify-logo"></div>
+				<ul>
+					<li><Link to="/">Home</Link></li>
+					<li><Link to="/artist">Albums</Link></li>
+					<li><Link to="/artists">Artists</Link></li>
 
-		</ul>);
+				</ul>
+				<p className="user-name">Ahmed Wagdi</p>
+			</div>
+		</div>
+		);
 }
-
 
 

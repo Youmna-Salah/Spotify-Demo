@@ -19,11 +19,14 @@ export default class Artists extends React.Component{
 	}
 
 	render(){
-	return(
-	<div>
-	<h1> Artists</h1>
-	<ArtistList artists={this.state.artistList}/>
-	</div>
-	);
+		return(
+			<div className="artists-list-container">
+				<h1 className="title">Top Artists</h1>
+				<div className="medium-12 columns artists">
+					<ArtistList artists={this.state.artistList}/>
+				</div>
+				<div className="clear"></div>
+			</div>
+		);
 	}
 }
