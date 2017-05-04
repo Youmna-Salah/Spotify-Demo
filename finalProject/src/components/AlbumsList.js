@@ -1,8 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 export default function AlbumsList (props){
-	//console.log("ALBUMSSSSSSSSSSSS");
-	//console.log(props);
+	console.log("ALBUMSSSSSSSSSSSS");
+	console.log(props);
+	if(props.albums !== undefined){
+		console.log("INNNER undefined");
 	return(
 		<div className="row" key="100">
 		<ul key="200">
@@ -13,6 +15,11 @@ export default function AlbumsList (props){
 		}
 			)}
 		</ul>
+	  </div>
+		);}
+else
+	return(
+		<div className="row" key="100">
 	  </div>
 		);
 }  

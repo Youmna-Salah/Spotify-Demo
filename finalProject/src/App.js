@@ -2,6 +2,8 @@ import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Artists from './components/Artists';
 import Albums from './components/Albums';
+import ArtistsSearch from './components/ArtistsSearch';
+import AlbumsSearch from './components/AlbumsSearch';
 import Player from './components/Player';
 import SingleArtist from './components/SingleArtist'; 
 /* API information */
@@ -19,6 +21,7 @@ export default class App extends React.Component{
 	}
 
 	playTrack(tracks, index){
+		console.log("INNNN");
 		this.setState({queue: tracks, currentIndex:index});
 	}
 	nextTrack(){
@@ -34,6 +37,8 @@ export default class App extends React.Component{
 					<Menu />
 					<Route exact path="/" component={Artists}></Route>
 					<Route path="/artists" component={Artists}></Route>
+					<Route path="/albumsSearch" component={AlbumsSearch}></Route>
+					<Route path="/artistsSearch" component={ArtistsSearch}></Route>
 					<Route path="/albums/:id" render={(routeParams)=> <Albums {...routeParams}  playTrack={this.playTrack}/>}/>
 					<Route path="/artist/:id"
 					 render={(routeParams)=> <SingleArtist {...routeParams}  playTrack={this.playTrack}/>}/>
@@ -50,8 +55,8 @@ function Menu(props){
 				<div className="spotify-logo"></div>
 				<ul>
 					<li><Link to="/artists">Home</Link></li>
-					<li><Link to="/artist">Albums</Link></li>
-					<li><Link to="/artists">Artists</Link></li>
+					<li><Link to="/albumsSearch">Albums</Link></li>
+					<li><Link to="/artistsSearch">Artists</Link></li>
 				</ul>
 				<p className="user-name">Ahmed Wagdi</p>
 			
