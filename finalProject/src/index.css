@@ -252,10 +252,11 @@ img {
 	margin-right: 1%;
 	/*max-width: 10%;*/
 }
-.player.columns{
-	margin: 0;
-}
 .artist-details{
 	/*max-width: 6%;*/
-	float: left
+	float: left;
+	padding-right: 0;
+}
+.player-stream{
+	float: left;
 }

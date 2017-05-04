@@ -22,26 +22,26 @@ export default class Player extends React.Component{
 		console.log(this.props.current);
 		return(
 			<div className="player">
-				<div className="large-5 columns">
-					<div className="player-image small-1 columns" 
+				<div className="small-3 columns">
+					<div className="player-image small-2 columns" 
 						style={{backgroundImage: 
 							"url("+(this.props.current.album.images?
 								this.props.current.album.images[1].url:"")
 							+")"
 						}}>
 					</div>
-					<div className=" artist-details large-9 columns">
+					<div className=" artist-details large-8 columns">
 						<p>{this.props.current.name}</p>
 						<br/>
 						<p>{artist}</p>
 					</div>
 					<div className="clear"></div>
 				</div>
-				<div className="player-stream large-5 columns">
+				<div className="player-stream large-7 columns">
 					<button onClick={this.togglePlay}>play</button>
 			     	<ReactPlayer url={this.props.current.preview_url} playing={this.state.play} hidden/>
 				</div>
-				
+				<div className="clear"></div>
 			</div>
 		);
 	}
