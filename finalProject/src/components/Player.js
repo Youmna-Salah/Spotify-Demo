@@ -4,13 +4,18 @@ export default class Player extends React.Component{
 		constructor(props) {
 		super(props);
 		this.state= {
-			play:true
+			play:true,
+			width: 1
 		}
 		this.togglePlay = this.togglePlay.bind(this);
+		this.onProgress = this.onProgress.bind(this);
 	}
 	togglePlay(){
 			this.setState({play: !this.state.play});
 		}
+	onProgress(){
+	    this.setState({width: (this.state.width+1000)});
+	}
 	render(){
 		if(!this.props.current){
 			return null
@@ -19,7 +24,7 @@ export default class Player extends React.Component{
 			alert("ERRROR");
 		}
 		const artist = this.props.current.artists[0].name;
-		console.log(this.props.current);
+		console.log(this.props);
 		return(
 			<div className="player">
 				<div className="small-3 columns">
@@ -38,8 +43,11 @@ export default class Player extends React.Component{
 					<div className="clear"></div>
 				</div>
 				<div className="player-stream large-7 columns">
-					<button onClick={this.togglePlay}>play</button>
-			     	<ReactPlayer url={this.props.current.preview_url} playing={this.state.play} hidden/>
+					<button className="play-icon" onClick={this.togglePlay}>{this.state.play?"Pause":"Play"}</button>
+					<ReactPlayer url={this.props.current.preview_url} playing={this.state.play} onProgress={this.onProgress} hidden/>
+			     	<div className="stream">
+			     		<div className="streamed-so-far" style={{width: (this.state.width/30000)*100 +"%"}}></div>
+			     	</div>
 				</div>
 				<div className="clear"></div>
 			</div>

@@ -260,3 +260,17 @@ img {
 .player-stream{
 	float: left;
 }
+.stream{
+	background-color: dimgray;
+	height:4px;
+	width: 80%;
+	border-radius: 5px;
+}
+.play-icon{
+	margin-left:38%;
+}
+.streamed-so-far{
+	height: 4px;
+	background-color: green;
+	width: 50px;
+}
