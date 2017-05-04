@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
-import Home from './components/Home';
 import Artists from './components/Artists';
 import Albums from './components/Albums';
 import Player from './components/Player';
@@ -47,17 +46,15 @@ export default class App extends React.Component{
 
 function Menu(props){
 	return(
-		<div className="menu">
-			<div className="columns">
+		<div className="menu columns">
 				<div className="spotify-logo"></div>
 				<ul>
-					<li><Link to="/">Home</Link></li>
+					<li><Link to="/artists">Home</Link></li>
 					<li><Link to="/artist">Albums</Link></li>
 					<li><Link to="/artists">Artists</Link></li>
-
 				</ul>
 				<p className="user-name">Ahmed Wagdi</p>
-			</div>
+			
 		</div>
 		);
 }
