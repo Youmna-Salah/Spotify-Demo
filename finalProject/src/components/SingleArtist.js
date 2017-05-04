@@ -38,10 +38,9 @@ export default class SingleArtist extends React.Component{
 
 	render(){
 		return(
-			<div className="columns">
-				{console.log("Artist")}
-				<div className="after-artist-pic">
-					<div className="profile-pic" 
+			<div className="artist-page columns">
+				<div>
+					<div className="" 
 						style={{
 							backgroundImage: `url(this.state.artist.images? this.state.artist.images[0].url:""))`
 						}}>
@@ -50,6 +49,7 @@ export default class SingleArtist extends React.Component{
 						</div>
 					</div>
 				</div>
+				
 				<SongsList songs={this.state.tracks} playTrack={this.props.playTrack}/>
 				<h3 className="artist-name">Albums</h3>
 				<AlbumsList albums={this.state.albums} />
