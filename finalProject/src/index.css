@@ -269,12 +269,23 @@ img {
 	height:4px;
 	width: 80%;
 	border-radius: 5px;
+	padding:0px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 .play-icon{
-	margin-left:38%;
+	margin-left:45%;
 }
 .streamed-so-far{
 	height: 4px;
 	background-color: green;
-	width: 50px;
+}
+.time-elapsed{
+	width: 2%	;
+}
+.stream-column.columns{
+	padding: 0;
+}
+.duration{
+	text-align: center;
 }

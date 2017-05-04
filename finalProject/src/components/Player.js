@@ -5,7 +5,7 @@ export default class Player extends React.Component{
 		super(props);
 		this.state= {
 			play:true,
-			width: 1
+			width: 0
 		}
 		this.togglePlay = this.togglePlay.bind(this);
 		this.onProgress = this.onProgress.bind(this);
@@ -45,8 +45,14 @@ export default class Player extends React.Component{
 				<div className="player-stream large-7 columns">
 					<button className="play-icon" onClick={this.togglePlay}>{this.state.play?"Pause":"Play"}</button>
 					<ReactPlayer url={this.props.current.preview_url} playing={this.state.play} onProgress={this.onProgress} hidden/>
-			     	<div className="stream">
-			     		<div className="streamed-so-far" style={{width: (this.state.width/30000)*100 +"%"}}></div>
+			     	<div className="stream-bar row">
+			     		<p className="small-1 columns duration">{this.state.width/1000}</p>
+			     		<div className="stream-column">
+					     	<div className="small-10 columns stream" style={{padding:0+"px"}}>
+					     		<div className="streamed-so-far" style={{width: (this.state.width/30000)*100 +"%"}}></div>
+					     	</div>
+				     	</div>
+				     	<p className="small-1 columns duration">30</p>
 			     	</div>
 				</div>
 				<div className="clear"></div>
