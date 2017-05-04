@@ -24,7 +24,7 @@ export default class Player extends React.Component{
 			alert("ERRROR");
 		}
 		const artist = this.props.current.artists[0].name;
-		console.log(this.props);
+		// console.log(this.props);
 		return(
 			<div className="player">
 				<div className="small-3 columns">

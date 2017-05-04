@@ -45,12 +45,13 @@ img {
 }
 .player{
 	position: fixed;
-	background-color: red;
+	background-color: #434343;;
 	bottom: 0;
 	left:0;
 	width:100%;
 	padding:10px; 
 	padding-left: 10px;
+	color: white;
 }
 .clear{
 	clear: both;
@@ -211,6 +212,9 @@ img {
 	color: white;
 	position: fixed;
 	bottom: 0;
+}
+.play-icon{
+	color: white;
 }
 .artist{
 	margin-bottom: 4%;
