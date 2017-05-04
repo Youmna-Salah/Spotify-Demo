@@ -6,34 +6,43 @@ export default class Player extends React.Component{
 		this.state= {
 			play:true
 		}
-				this.togglePlay = this.togglePlay.bind(this);
-
+		this.togglePlay = this.togglePlay.bind(this);
 	}
-togglePlay(){
-		this.setState({play: !this.state.play});
+	togglePlay(){
+			this.setState({play: !this.state.play});
+		}
+	render(){
+		if(!this.props.current){
+			return null
+		}
+		if(!this.props.current.preview_url){
+			alert("ERRROR");
+		}
+		const artist = this.props.current.artists[0].name;
+		console.log(this.props.current);
+		return(
+			<div className="player">
+				<div className="large-5 columns">
+					<div className="player-image small-1 columns" 
+						style={{backgroundImage: 
+							"url("+(this.props.current.album.images?
+								this.props.current.album.images[1].url:"")
+							+")"
+						}}>
+					</div>
+					<div className=" artist-details large-9 columns">
+						<p>{this.props.current.name}</p>
+						<br/>
+						<p>{artist}</p>
+					</div>
+					<div className="clear"></div>
+				</div>
+				<div className="player-stream large-5 columns">
+					<button onClick={this.togglePlay}>play</button>
+			     	<ReactPlayer url={this.props.current.preview_url} playing={this.state.play} hidden/>
+				</div>
+				
+			</div>
+		);
 	}
-render(){
-	if(!this.props.current){
-		return null
-	}
-	if(!this.props.current.preview_url){
-		alert("ERRROR");
-	}
-const artist = this.props.current.artists[0].name;
-	return(
-		<div className="player">
-		<div>
-		<h5>Artist name</h5>
-		<br/>
-		<p>Track name</p>
-		</div>
-		<div>
-		<h5>{this.props.current.name}</h5>
-		<p>{artist}</p>
-		</div>
-		<button onClick={this.togglePlay}>play</button>
-		       <ReactPlayer url={this.props.current.preview_url}
-		       playing={this.state.play} hidden/>
-		       </div>);
-}
 } 
