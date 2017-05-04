@@ -51,11 +51,13 @@ border-radius: 25px;
 }
 .player{
 	position: fixed;
-	background-color: red;
+	background-color: #434343;;
 	bottom: 0;
 	left:0;
 	width:100%;
-	padding:20px; 
+	padding:10px; 
+	padding-left: 10px;
+	color: white;
 }
 .clear{
 	clear: both;
@@ -200,8 +202,11 @@ border-radius: 25px;
 }
 .user-name{
 	color: white;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
+}
+.play-icon{
+	color: white;
 }
 .artist{
 	margin-bottom: 4%;
@@ -221,7 +226,7 @@ border-radius: 25px;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.profile-pic:after{
+/*.profile-pic:after{
 	content: "";
     position: absolute;
     left: 0;
@@ -229,8 +234,50 @@ border-radius: 25px;
     top: 0;
     bottom: 0;
 	background: linear-gradient(0deg, #191919, transparent);
-}
+}*/
 .artist-profile-det{
 	padding-top: 18%;
 	opacity: 1;
+}
+.player p{
+	margin-bottom: 0;
+}
+.player-image{
+	height: 50px;
+	width: 50px;
+	margin-right: 1%;
+	/*max-width: 10%;*/
+}
+.artist-details{
+	/*max-width: 6%;*/
+	float: left;
+	padding-right: 0;
+}
+.player-stream{
+	float: left;
+}
+.stream{
+	background-color: dimgray;
+	height:4px;
+	width: 80%;
+	border-radius: 5px;
+	padding:0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.play-icon{
+	margin-left:45%;
+}
+.streamed-so-far{
+	height: 4px;
+	background-color: green;
+}
+.time-elapsed{
+	width: 2%	;
+}
+.stream-column.columns{
+	padding: 0;
+}
+.duration{
+	text-align: center;
 }

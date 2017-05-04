@@ -14,7 +14,7 @@ export default class Albums extends React.Component{
 	componentDidMount(){
 	const id = this.props.match.params.id;
 	axios.get(`${APIURL}/albums/${id}/tracks?limit=1`).then(response => {
-		    console.log(response.data.items);
+		   // console.log(response.data.items);
 			this.setState({SongsList: response.data.items});
 		});
 
