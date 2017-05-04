@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import '../index.css';
 import ArtistList from './ArtistList';
 /* API information */
 import {APIURL} from "../App";
@@ -30,11 +30,10 @@ export default class ArtistsSearch extends React.Component{
 	render(){
 		return(
 				<div className="artists-list-container">
-			    <form className="search" onSubmit={this.searchVideos}>
-				<input className="searchbar" ref="keyword" type="text" placeholder="Search..."/>
-				</form>
-
 				<h1 className="title">Search for artists</h1>
+			    <form  className="searchbar" onSubmit={this.searchVideos}>
+				<input className="search" ref="keyword" type="text" placeholder="Search..."/>
+				</form>
 				<div className="medium-12 columns artists">
 					<ArtistList artists={this.state.artistList}/>
 				</div>

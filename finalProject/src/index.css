@@ -43,6 +43,12 @@ div{
 img {
 	max-width: 100%;
 }
+form .search{
+border-radius: 25px;
+    border: none;
+    padding: 10px;
+    width: 300px;
+}
 .player{
 	position: fixed;
 	background-color: red;
@@ -94,29 +100,15 @@ img {
 		max-height: 50vh;
 
 }
-.search{
-	padding: 20px;
-	background-color: white;
-}
+
 #details{
 	padding: 20px;
 	background-color: white
 }
-.searchbar{
-    width: 68%;
-    height: 50px;
-    display: inline-flex;
-    position: relative;
-    margin: 20px;
-    color: rgba(255, 255, 255, 0.5);
-}
+
 .searchContainer{
+	border-radius: 25px;
 	display: block;
-}
-.search{
-    margin: 0 auto;
-    width: 100%;
-    display: inline-flex;
 }
 .logo{
     display: flex;
