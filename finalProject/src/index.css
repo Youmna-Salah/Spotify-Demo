@@ -132,6 +132,7 @@ border-radius: 25px;
 	width: 13%;
 	color: white;
 	height: 100vh;
+	background-color: black;
 	/*height:100%;*/
 }
 .menu.columns{
@@ -281,3 +282,77 @@ border-radius: 25px;
 .duration{
 	text-align: center;
 }
+.single-album{
+	background-color: rgb(25, 25, 25);
+	width: 100%;
+}
+.single-album .row{
+	max-width: 100%;
+}
+.single-album-det{
+	height: 100%;
+	text-align: center;
+	padding-top: 2%;
+}
+.single-album-det.columns{
+	padding-left: 3%;
+
+}
+.single-album-pic{
+	height: 300px;
+	width: 300px;
+	background-size: cover;
+}
+.single-album-tracks{
+	background-color: blue;
+	height: 100%;
+}
+.album-artist-album-name{
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+}
+.album-artist-name{
+	color: white;
+	opacity: 0.2;
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 0%;
+}
+.album-artist-tracks{
+	color: white;
+	font-size: 16px;
+	margin-top: 1%;
+	margin-bottom: 4%;
+}
+.button-1 {
+   	background-color: #2ebd59;
+   	color: white;
+	text-transform: uppercase;
+ }
+.button-1:hover {
+   background-color: #219042;
+   color: white;
+}
+.button-1:active{
+	color: white;
+}
+.button-follow {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem 0;
+    padding: 0.9em 2.5em;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: #2ebd59;
+    color: white;
+    border-radius: 30px;
+    margin-right: 1%;
+}
+
