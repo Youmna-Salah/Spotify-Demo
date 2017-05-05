@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import '../index.css'
 import AlbumsList from './AlbumsList';
 
 /* API information */
@@ -24,8 +24,8 @@ export default class AlbumsSearch extends React.Component{
 		event.preventDefault();
 		let keyword = this.refs.keyword.value;
 		axios.get(`${APIURL}/search?type=album&q=${keyword}`).then(response => {
-			console.log("AlbumsSearch: ");
-			console.log(response);
+			//console.log("AlbumsSearch: ");
+			//console.log(response);
 			this.setState({albumstList: response.data.albums.items});
 		});
 	}
@@ -33,10 +33,10 @@ export default class AlbumsSearch extends React.Component{
 	render(){
 		return(
 			<div className="artists-list-container">
-				<form className="search" onSubmit={this.searchVideos}>
-					<input className="searchbar" ref="keyword" type="text" placeholder="Search..."/>
-				</form>
 				<h1 className="title">Search for albums</h1>
+				<form className="searchbar" onSubmit={this.searchVideos}>
+					<input className="search" ref="keyword" type="text" placeholder="Search..."/>
+				</form>
 				<div className="medium-12 columns artists">
 					<AlbumsList albums={this.state.albumstList}/>
 				</div>
