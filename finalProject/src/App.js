@@ -51,7 +51,7 @@ export default class App extends React.Component{
 
 function Menu(props){
 	return(
-		<div className="menu columns">
+		<div className="menu medium-12 columns artists">
 				<div className="spotify-logo"></div>
 				<ul>
 					<li><Link to="/artists">Home</Link></li>
