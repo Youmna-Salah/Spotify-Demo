@@ -23,12 +23,13 @@ export default class App extends React.Component{
 	}
 
 	playTrack(tracks, index){
-		console.log(tracks[index]);
 		this.setState({queue: tracks, currentIndex:index});
+		// console.log(this.state.currentIndex);
 	}
 	nextTrack(){
 		if(this.state.currentIndex !== this.state.queue.length-1){
 			this.setState({currentIndex: this.state.currentIndex+1});
+			console.log(this.state.currentIndex);
 		}
 
 	}
@@ -37,13 +38,13 @@ export default class App extends React.Component{
 			<BrowserRouter>
 				<div className="page row">
 					<Menu />
-					<Route exact path="/" component={Artists}></Route>
-					<Route path="/artists" component={Artists}></Route>
+					<Route exact path="/" currentIndex={this.state.currentIndex} component={Artists}></Route>
+					<Route path="/artists" currentIndex={this.state.currentIndex} component={Artists}></Route>
 					<Route path="/albumsSearch" component={AlbumsSearch}></Route>
 					<Route path="/artistsSearch" component={ArtistsSearch}></Route>
-					<Route path="/albums/:id" render={(routeParams)=> <Albums {...routeParams}  playTrack={this.playTrack}/>}/>
+					<Route path="/albums/:id" render={(routeParams)=> <Albums currentIndex={this.state.currentIndex} {...routeParams}   playTrack={this.playTrack}/>}/>
 					<Route path="/artist/:id"
-					 render={(routeParams)=> <SingleArtist {...routeParams}  playTrack={this.playTrack}/>}/>
+					 render={(routeParams)=> <SingleArtist currentIndex={this.state.currentIndex} {...routeParams}  playTrack={this.playTrack}/>}/>
 					<Player current={this.state.queue[this.state.currentIndex]}/>
 				</div>
 			</BrowserRouter>

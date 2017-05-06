@@ -9,7 +9,8 @@ export default class Artists extends React.Component{
 		super(props);
 		this.state = {
 			artistList: [],
-			artist: []
+			artist: [],
+			currentIndex: null
 		}
 	}
 	componentDidMount(){
@@ -23,7 +24,7 @@ export default class Artists extends React.Component{
 			<div className="artists-list-container">
 				<h1 className="title">Top Artists</h1>
 				<div className="medium-12 columns artists">
-					<ArtistList artists={this.state.artistList}/>
+					<ArtistList currentIndex={this.state.currentIndex} artists={this.state.artistList}/>
 				</div>
 				<div className="clear"></div>
 			</div>

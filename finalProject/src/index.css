@@ -423,3 +423,18 @@ h6, p, h1, h2 {
 	margin: 0;
 	padding: 0 10px;
 }
+.song:hover{
+	background-color: black;
+}
+.song *{
+	color: white;
+}
+.song:hover *{
+	color: white;
+}
+.active *{
+	color: green;
+}
+.active:hover *{
+	color: green;
+}
