@@ -14,15 +14,18 @@ export default class SingleArtist extends React.Component{
 	}
 	componentDidMount(){
 		const id = this.props.match.params.id;
+		this.setState({currentIndex: this.props.currentIndex});
 		axios.get(`${APIURL}/artists/${id}`).then(
 			(response)=>{
 				this.setState({artist: response.data});
-			})
+			});
+		
 		this.getTopTracks();
 		this.getAlbums();
 	}
 	getTopTracks(){
 		const id = this.props.match.params.id;
+		
 		axios.get(`${APIURL}/artists/${id}/top-tracks?country=SE`).then(
 			(response)=>{
 				this.setState({tracks: response.data.tracks});
@@ -37,10 +40,10 @@ export default class SingleArtist extends React.Component{
 	}
 
 	render(){
-			console.log("single artissssssst"); 
-			const followers = this.state.artist.followers? this.state.artist.followers.total:"0";
-			const image = this.state.artist.images? this.state.artist.images[0].url:"";
-			console.log(image);
+		const followers = this.state.artist.followers? this.state.artist.followers.total:"0";
+		const image = this.state.artist.images? this.state.artist.images[0].url:"";
+		// console.log("CURRENT SINGLE");
+		// console.log(this.props.currentIndex);
 		return(
 			<div className="artist-page columns">
 				<div>	
@@ -55,7 +58,7 @@ export default class SingleArtist extends React.Component{
 					
 					<div style={{backgroundColor: "rgb(26, 23, 23)"}}>
 						<h2 className="artist-name" style={{margin: "2%"}}>Top Tracks</h2>
-						<SongsList songs={this.state.tracks} playTrack={this.props.playTrack}/>
+						<SongsList songs={this.state.tracks} currentIndex={this.props.currentIndex} playTrack={this.props.playTrack}/>
 					</div>
 				</div>
 					<h3 className="artist-name" style = {{margin: "2%"}}>Albums</h3>
