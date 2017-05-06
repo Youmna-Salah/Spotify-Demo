@@ -44,12 +44,10 @@ export default class SingleArtist extends React.Component{
 		return(
 			<div className="artist-page columns">
 				<div>	
-					<div className="artist-profile-det" style={{backgroundSize: "cover",
-   						 backgroundRepeat: "no-repeat",    paddingTop: "35%",
- 						   backgroundPosition: "50% 25%",backgroundImage: "url("+image+")"}}>
+					<div className="artist-profile-det" style={{backgroundImage: "url("+image+")"}}>
 							<div className="image-info">
-							<p style = {{display: "block",padding: "0",margin: "0",marginBottom: "0%",padding: "0 10px"}} class="artist__followers"> {followers} follower </p>
-							<h1 style = {{display: "block",padding: "0",margin: "0",marginBottom: "1.5%"}} className="artist-name artist-name-single">{this.state.artist.name}</h1>
+							<p  className="followers"> {followers} follower </p>
+							<h1 style = {{marginBottom: "1.5%"}} className="followers artist-name artist-name-single">{this.state.artist.name}</h1>
 							<a href="#" className="button-follow button-1">Follow</a>
 							<a href="#" className="button-follow button--transparent">Play All</a>		
 							</div>

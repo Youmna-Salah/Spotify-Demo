@@ -239,12 +239,15 @@ border-radius: 25px;
 }
 .artist-profile-det{
 	padding: 2%;
-	padding-top: 40%;
 	opacity: 1;
 	position: relative;
+	background-size: cover;
+   	background-repeat: no-repeat;
+   	padding-top: 35%;
+ 	background-position: 50% 25%;
 }
 .image-info {
-	top: 40%;
+	top: 45%;
     width: 100%;
 	position: absolute;
     z-index: 10;
@@ -404,4 +407,9 @@ h6, p, h1, h2 {
 }
 .fa:hover {
 	color: #258faf;
+}
+.followers {
+	display: block;
+	margin: 0;
+	padding: 0 10px;
 }

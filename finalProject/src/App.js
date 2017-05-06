@@ -51,10 +51,7 @@ export default class App extends React.Component{
 	}
 }
 
-function Menu(props){
-	var React = require('react');
-	var FontAwesome = require('react-fontawesome');
- 
+function Menu(props){ 
 	return(
 		<div className="menu medium-12 columns artists">
 				<div className="spotify-logo"></div>
