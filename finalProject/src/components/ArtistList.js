@@ -9,7 +9,7 @@ export default function ArtistList (props){
 			const image = artist.images.length? artist.images[0].url:"";
 		    return(
 			    <div key={i} className="large-3 columns artist">
-			    	<Link to={`/artist/${artist.id}`} params={{currentIndex: props.currentIndex}}>
+			    	<Link to={`/artist/${artist.id}`}>
 			    		<div className="artist-img-list" style={{backgroundImage: "url("+image+")"}}></div>
 						<h6 className="artist-name">{artist.name}</h6>
 					</Link>

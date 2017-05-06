@@ -18,6 +18,11 @@ export default class Player extends React.Component{
 			this.setState({width: 0});
 			this.setState({played: 0});
 		}
+	componentWillReceiveProps(nextProps) {
+		if (this.props.current == undefined || (nextProps.current.id !== this.props.current.id)) {
+			this.setState({play: true});
+		}
+	}
 	onProgress(played){
 		//console.log(played);
 	    this.setState({width: played});
