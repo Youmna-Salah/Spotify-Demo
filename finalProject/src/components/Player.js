@@ -5,16 +5,21 @@ export default class Player extends React.Component{
 		super(props);
 		this.state= {
 			play:true,
-			width: 0
+			width: 0,
+			played: 0 
 		}
 		this.togglePlay = this.togglePlay.bind(this);
 		this.onProgress = this.onProgress.bind(this);
 	}
 	togglePlay(){
 			this.setState({play: !this.state.play});
+			this.setState({width: 0});
+			this.setState({played: 0});
 		}
-	onProgress(){
-	    this.setState({width: (this.state.width+1000)});
+	onProgress(played){
+		console.log(played);
+	    this.setState({width: played});
+	    this.setState({played: this.state.played+1});
 	}
 	render(){
 		if(!this.props.current){
@@ -42,16 +47,17 @@ export default class Player extends React.Component{
 					</div>
 					<div className="clear"></div>
 				</div>
-				<div className="player-stream large-7 columns">
+				<div className="player-stream large-6 columns">
 					<button className="play-icon" onClick={this.togglePlay}>{this.state.play?"Pause":"Play"}</button>
 					<ReactPlayer url={this.props.current.preview_url} playing={this.state.play} onProgress={this.onProgress} hidden/>
 			     	<div className="stream-bar row">
-			     		<p className="small-1 columns duration">{this.state.width/1000}</p>
+			     		
 			     		<div className="stream-column">
-					     	<div className="small-10 columns stream" style={{padding:0+"px"}}>
-					     		<div className="streamed-so-far" style={{width: (this.state.width/30000)*100 +"%"}}></div>
+					     	<div className=" columns stream" style={{padding: 0+"px"}}>
+					     		<div className="streamed-so-far" style={{width: (this.state.width.played)*100 +"%"}}></div>
 					     	</div>
 				     	</div>
+				     	<p className="small-1 columns duration">{this.state.width.played?Math.round(this.state.width.played*30):0}</p>
 				     	<p className="small-1 columns duration">30</p>
 			     	</div>
 				</div>

@@ -295,18 +295,19 @@ h6, p, h1, h2 {
 }
 .player-stream{
 	float: left;
+	text-align: center;
 }
 .stream{
 	background-color: dimgray;
 	height:4px;
-	width: 80%;
+	width: 100%;
 	border-radius: 5px;
 	padding:0px;
 	padding-left: 0px;
 	padding-right: 0px;
 }
 .play-icon{
-	margin-left:45%;
+	/*margin-left:45%;*/
 }
 .streamed-so-far{
 	height: 4px;
