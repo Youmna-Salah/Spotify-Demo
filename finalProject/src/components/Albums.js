@@ -1,9 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {APIURL} from "../App";
 import axios from 'axios';
 import SongsList from './SongsList';
 import '../index.css'
 import '../foundation/foundation-6.3.0-complete/css/foundation.css';
+
 export default class Albums extends React.Component{
 	constructor(props) {
 		super(props);
@@ -20,6 +22,9 @@ export default class Albums extends React.Component{
 		// 	   console.log(response.data.items);
 		// 		this.setState({SongsList: response.data.items});
 		// });
+		// href={{"artist/"+this.state.album.artists?this.state.album.artists[0].id:""}} 
+							// <a onPress={() => Linking.openURL('http://google.com')}>
+							// className="button-follow button-1"></a>
 
 		axios.get(`${APIURL}/albums/${id}`).then(response => {
 				console.log('IMAGES: ');
@@ -46,7 +51,7 @@ export default class Albums extends React.Component{
 						<br/>
 						<h4 className="album-artist-tracks">{this.state.SongsList?this.state.SongsList.length+" tracks":""}</h4>
 						<br/>
-						<a href="#" className="button-follow button-1">Artist profile</a>
+						<Link to={`/artist/${this.state.album.artists?this.state.album.artists[0].id:""}`} className="button-follow button-1">Artist profile</Link>
 					</div>
 					<div className="single-album-tracks large-7 columns">
 						<SongsList songs={this.state.SongsList}  playTrack={this.props.playTrack}/>
