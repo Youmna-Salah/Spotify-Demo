@@ -6,6 +6,8 @@ import ArtistsSearch from './components/ArtistsSearch';
 import AlbumsSearch from './components/AlbumsSearch';
 import Player from './components/Player';
 import SingleArtist from './components/SingleArtist'; 
+import FontAwesome from 'react-fontawesome';
+import '../public/font-awesome-4.7.0/css/font-awesome.css'
 /* API information */
 export const APIURL="https://api.spotify.com/v1"; 
 
@@ -50,6 +52,9 @@ export default class App extends React.Component{
 }
 
 function Menu(props){
+	var React = require('react');
+	var FontAwesome = require('react-fontawesome');
+ 
 	return(
 		<div className="menu medium-12 columns artists">
 				<div className="spotify-logo"></div>
@@ -58,8 +63,9 @@ function Menu(props){
 					<li><Link to="/albumsSearch">Albums</Link></li>
 					<li><Link to="/artistsSearch">Artists</Link></li>
 				</ul>
-				<p className="user-name">Ahmed Wagdi</p>
-			
+					<a className="userName">
+					<i className="fa fa-user-o user-name" aria-hidden="true">    Ahmed Wagdi</i>
+					</a>
 		</div>
 		);
 }

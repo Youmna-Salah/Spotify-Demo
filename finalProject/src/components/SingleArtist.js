@@ -43,18 +43,17 @@ export default class SingleArtist extends React.Component{
 			console.log(image);
 		return(
 			<div className="artist-page columns">
-				<div>
-					
-						<div className="artist-profile-det" style={{backgroundSize: "cover",
-   						 backgroundRepeat: "no-repeat",    paddingTop: "20%",
+				<div>	
+					<div className="artist-profile-det" style={{backgroundSize: "cover",
+   						 backgroundRepeat: "no-repeat",    paddingTop: "35%",
  						   backgroundPosition: "50% 25%",backgroundImage: "url("+image+")"}}>
-							<p style = {{padding: "0",margin: "0",marginBottom: "0%",padding: "0 10px"}} class="artist__followers"> {followers} follower </p>
-							<br/>
-							<h1 style = {{padding: "0",margin: "0",marginBottom: "1.5%"}} className="artist-name artist-name-single">{this.state.artist.name}</h1>
-							<br/>
+							<div className="image-info">
+							<p style = {{display: "block",padding: "0",margin: "0",marginBottom: "0%",padding: "0 10px"}} class="artist__followers"> {followers} follower </p>
+							<h1 style = {{display: "block",padding: "0",margin: "0",marginBottom: "1.5%"}} className="artist-name artist-name-single">{this.state.artist.name}</h1>
 							<a href="#" className="button-follow button-1">Follow</a>
 							<a href="#" className="button-follow button--transparent">Play All</a>		
-						</div>	
+							</div>
+					</div>	
 					
 					<div style={{backgroundColor: "rgb(26, 23, 23)"}}>
 						<h2 className="artist-name" style={{margin: "2%"}}>Top Tracks</h2>
@@ -63,7 +62,7 @@ export default class SingleArtist extends React.Component{
 				</div>
 					<h3 className="artist-name" style = {{margin: "2%"}}>Albums</h3>
 					<AlbumsList albums={this.state.albums} />
-				</div>	
+			</div>	
 			);
 	}
 	

@@ -229,20 +229,25 @@ border-radius: 25px;
 	background-repeat: no-repeat;
 }
 .artist-profile-det:after{
-/*.profile-pic:after{
->>>>>>> master
 	content: "";
-/*    position: absolute;
-*/    left: 0;
+    position: absolute;
+    left: 0;
     right: 0;
     top: 0;
     bottom: 0;
 	background: linear-gradient(0deg, #191919, transparent);
-}*/
+}
 .artist-profile-det{
 	padding: 2%;
-	padding-top: 10%;
+	padding-top: 40%;
 	opacity: 1;
+	position: relative;
+}
+.image-info {
+	top: 40%;
+    width: 100%;
+	position: absolute;
+    z-index: 10;
 }
 .artist-photo {
 	background-size: cover;
@@ -394,4 +399,9 @@ h6, p, h1, h2 {
     background-color: rgba(0,0,0,.5);
     border: 1px solid #fff;
 }
-
+.fa {
+	padding: 2.5%
+}
+.fa:hover {
+	color: #258faf;
+}
