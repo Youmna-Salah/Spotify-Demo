@@ -35,7 +35,7 @@ export default class Player extends React.Component{
 				<div className="small-3 columns">
 					<div className="player-image small-2 columns" 
 						style={{backgroundImage: 
-							"url("+(this.props.current.album.images?
+							"url("+(this.props.current.album?
 								this.props.current.album.images[1].url:"")
 							+")"
 						}}>
