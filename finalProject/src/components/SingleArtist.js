@@ -49,7 +49,7 @@ export default class SingleArtist extends React.Component{
 				<div>	
 					<div className="artist-profile-det" style={{backgroundImage: "url("+image+")"}}>
 							<div className="image-info">
-							<p  className="followers"> {followers} follower </p>
+							<p  className="followers"> {followers} followers </p>
 							<h1 style = {{marginBottom: "1.5%"}} className="followers artist-name artist-name-single">{this.state.artist.name}</h1>
 							<a href="#" className="button-follow button-1">Follow</a>
 							<a href="#" className="button-follow button--transparent">Play All</a>		
