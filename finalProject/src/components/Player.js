@@ -10,8 +10,8 @@ export default class Player extends React.Component{
 			width: 0,
 			played: 0 
 		}
-		this.togglePlay = this.togglePlay.bind(this);
 		this.onProgress = this.onProgress.bind(this);
+		this.togglePlay = this.togglePlay.bind(this);
 	}
 	togglePlay(){
 			this.setState({play: !this.state.play});
@@ -24,8 +24,9 @@ export default class Player extends React.Component{
 		}
 	}
 	onProgress(played){
-		//console.log(played);
-	    this.setState({width: played});
+		console.log("PLAYED");
+		console.log(played);
+	    this.setState({width: played.played*100});
 	    this.setState({played: this.state.played+1});
 	}
 	render(){
@@ -36,7 +37,6 @@ export default class Player extends React.Component{
 			alert("ERRROR");
 		}
 		const artist = this.props.current.artists[0].name;
-		// console.log(this.props);
 		return(
 			<div className="player">
 				<div className="small-3 columns">
@@ -64,7 +64,7 @@ export default class Player extends React.Component{
 			     		<p className="small-1 columns duration">{this.state.width.played?Math.round(this.state.width.played*30):0}</p>
 			     		<div className="stream-column">
 					     	<div className=" columns stream" style={{padding: 0+"px"}}>
-					     		<div className="streamed-so-far" style={{width: (this.state.width.played)*100 +"%"}}></div>
+					     		<div className="streamed-so-far" style={{width:this.state.width +"%"}}></div>
 					     	</div>
 				     	</div>
 				     	<p className="small-1 columns duration">30</p>
