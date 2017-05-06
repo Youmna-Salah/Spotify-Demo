@@ -23,7 +23,7 @@ export default class App extends React.Component{
 	}
 
 	playTrack(tracks, index){
-		console.log("INNNN");
+		console.log(tracks[index]);
 		this.setState({queue: tracks, currentIndex:index});
 	}
 	nextTrack(){

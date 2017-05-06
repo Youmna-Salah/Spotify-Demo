@@ -304,17 +304,14 @@ h6, p, h1, h2 {
 	float: left;
 	text-align: center;
 }
+.stream-column{
+	display: inline-block;
+	width: 80%;
+}
 .stream{
 	background-color: dimgray;
 	height:4px;
-	width: 100%;
-	border-radius: 5px;
-	padding:0px;
-	padding-left: 0px;
-	padding-right: 0px;
-}
-.play-icon{
-	/*margin-left:45%;*/
+	border-radius: 10px;
 }
 .streamed-so-far{
 	height: 4px;
@@ -328,6 +325,7 @@ h6, p, h1, h2 {
 }
 .duration{
 	text-align: center;
+	display: inline-block;
 }
 .single-album{
 	background-color: rgb(25, 25, 25);

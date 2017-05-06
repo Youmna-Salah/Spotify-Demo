@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import FontAwesome from 'react-fontawesome';
+
 export default class Player extends React.Component{
 		constructor(props) {
 		super(props);
@@ -17,7 +19,7 @@ export default class Player extends React.Component{
 			this.setState({played: 0});
 		}
 	onProgress(played){
-		console.log(played);
+		//console.log(played);
 	    this.setState({width: played});
 	    this.setState({played: this.state.played+1});
 	}
@@ -48,16 +50,18 @@ export default class Player extends React.Component{
 					<div className="clear"></div>
 				</div>
 				<div className="player-stream large-6 columns">
-					<button className="play-icon" onClick={this.togglePlay}>{this.state.play?"Pause":"Play"}</button>
+					<a>{this.state.play?
+						<i className="fa fa-pause fa-2x play-icon" onClick={this.togglePlay} aria-hidden="true"></i>:
+						<i className="fa fa-play fa-2x play-icon" onClick={this.togglePlay} aria-hidden="true"></i>
+					}</a>
 					<ReactPlayer url={this.props.current.preview_url} playing={this.state.play} onProgress={this.onProgress} hidden/>
 			     	<div className="stream-bar row">
-			     		
+			     		<p className="small-1 columns duration">{this.state.width.played?Math.round(this.state.width.played*30):0}</p>
 			     		<div className="stream-column">
 					     	<div className=" columns stream" style={{padding: 0+"px"}}>
 					     		<div className="streamed-so-far" style={{width: (this.state.width.played)*100 +"%"}}></div>
 					     	</div>
 				     	</div>
-				     	<p className="small-1 columns duration">{this.state.width.played?Math.round(this.state.width.played*30):0}</p>
 				     	<p className="small-1 columns duration">30</p>
 			     	</div>
 				</div>

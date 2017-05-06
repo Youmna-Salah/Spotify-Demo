@@ -27,8 +27,8 @@ export default class Albums extends React.Component{
 							// className="button-follow button-1"></a>
 
 		axios.get(`${APIURL}/albums/${id}`).then(response => {
-				console.log('IMAGES: ');
-			   	console.log(response.data);
+				//console.log('IMAGES: ');
+			   	//console.log(response.data);
 			   	this.setState({album: response.data});
 				this.setState({images: response.data.images});
 				this.setState({SongsList: response.data.tracks.items});
@@ -37,7 +37,7 @@ export default class Albums extends React.Component{
 	}
 
 	render(){
-		console.log("STATE: " + this.state.images);
+		// console.log("STATE: " + this.state.images);
 		return(
 			<div className="single-album ">
 				<div className="row">

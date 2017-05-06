@@ -1,9 +1,9 @@
 import React from 'react';
 export default function SongsList (props){
-	console.log("SONGS LISTS");
+	//console.log("SONGS LISTS");
 	
-	if(props.songs[0])
-	console.log(props.songs[0].duration_ms);
+	// if(props.songs[0])
+	// console.log(props.songs[0].duration_ms);
 	return(<div className="row" key="100" style={{margin: "1%"}}>
 		<ul key="200">
 		{props.songs.map((song, i) => { 
