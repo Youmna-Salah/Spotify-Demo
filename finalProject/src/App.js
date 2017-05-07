@@ -57,13 +57,14 @@ function Menu(props){
 		<div className="menu medium-12 columns artists">
 				<div className="spotify-logo"></div>
 				<ul>
-					<li><Link to="/artists">Home</Link></li>
-					<li><Link to="/albumsSearch">Albums</Link></li>
-					<li><Link to="/artistsSearch">Artists</Link></li>
+					<li><Link to="/artists" className="aclass">Home</Link></li>
+					<li><Link to="/albumsSearch" className="aclass">Albums</Link></li>
+					<li><Link to="/artistsSearch" className="aclass">Artists</Link></li>
 				</ul>
-					
-				<i className="fa fa-user-o user-name" aria-hidden="true">Ahmed Wagdi</i>
-					
+				<a className="hover">	
+					<i className="fa fa-user-o user-name" aria-hidden="true"></i>
+					<li className="user-name  pad">Ahmed Wagdi</li>
+				</a>
 		</div>
 		);
 }

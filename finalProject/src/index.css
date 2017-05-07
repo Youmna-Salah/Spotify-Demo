@@ -146,16 +146,16 @@ border-radius: 25px;
 .menu.columns{
 	width: 13%;
 }
-.menu a{
+.menu .aclass{
 	color: white;
 	opacity: 0.6;
 	font-weight: bold;
 }
-.menu a:hover{
+.menu .aclass:hover{
 	color: white;
 	opacity: 1;
 }
-.menu a:focus{
+.menu .aclass:focus{
 	color: white;
 	opacity: 1;
 }
@@ -454,6 +454,6 @@ h6, p, h1, h2 {
 	color: white;
 	opacity: 1;
 }
-.hover:hover{
+.hover:hover *{
 	color: #258faf;
 }
