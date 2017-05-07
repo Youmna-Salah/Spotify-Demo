@@ -61,9 +61,9 @@ function Menu(props){
 					<li><Link to="/albumsSearch">Albums</Link></li>
 					<li><Link to="/artistsSearch">Artists</Link></li>
 				</ul>
-					<a className="userName">
-					<i className="fa fa-user-o user-name" aria-hidden="true">    Ahmed Wagdi</i>
-					</a>
+					
+				<i className="fa fa-user-o user-name" aria-hidden="true">Ahmed Wagdi</i>
+					
 		</div>
 		);
 }

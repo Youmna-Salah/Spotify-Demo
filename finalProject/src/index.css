@@ -217,6 +217,9 @@ border-radius: 25px;
 	color: white;
 	position: fixed;
 	bottom: 0;
+	opacity: 1;
+	font-size: 15px;
+	display: inline-block;
 }
 .play-icon{
 	color: white;
@@ -413,7 +416,9 @@ h6, p, h1, h2 {
     border: 1px solid #fff;
 }
 .fa {
-	padding: 2.5%
+	padding-bottom: 1%;
+	color: white;
+	opacity: 1;
 }
 .fa:hover {
 	color: #258faf;
@@ -437,4 +442,18 @@ h6, p, h1, h2 {
 }
 .active:hover *{
 	color: green;
+}
+.pad{
+	margin-left: 3px;
+	font-size: 16px;
+	padding-left: 1%;
+	padding-bottom: 0.5%;
+	display: inline-block;
+}
+.hover{
+	color: white;
+	opacity: 1;
+}
+.hover:hover{
+	color: #258faf;
 }
